@@ -20,4 +20,19 @@ class HomeController
     public function homepage(){
         return new Response("First symfony controller");
     }
+
+    /**
+     * @Route("/article/Populous")
+     */
+    //public function read(){
+    //    return new Response("Voici le premier article");
+    //}
+
+    /**
+     * @Route("/article/{content}")
+     */
+    public function read($content){
+        return new Response("Voici le premier article ".$content);
+    }
+
 }
